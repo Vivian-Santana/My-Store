@@ -1,13 +1,13 @@
 import { GlobalStyles } from './styles/GlobalStyles';
 import { Header } from './Components/Header/Header';
-import { CardProduto } from './Components/CardProduto/CardProduto';
+import { ListaDeProdutos } from './Components/ListaDeProdutos/ListaDeProdutos';
 
 
 function App() {
   return (
     <>
       <Header/>
-      <CardProduto />
+      <ListaDeProdutos />
 
       <GlobalStyles />
     </>

@@ -43,6 +43,12 @@ export const AutenticacaoBtn = styled.button`
     svg {
         font-size: 0.8rem;
     }
+
+    &:hover{
+        cursor: pointer;
+        background-color: darkgreen;
+        font-weight: bold;
+    }
 `;
 
 export const CarrinhoBtn = styled.button`
@@ -59,6 +65,12 @@ export const CarrinhoBtn = styled.button`
 
     svg {
         font-size: 0.8rem;
+    }
+
+    &:hover{
+        cursor: pointer;
+        background-color: darkviolet;
+        color: white;
     }
 `;
 
