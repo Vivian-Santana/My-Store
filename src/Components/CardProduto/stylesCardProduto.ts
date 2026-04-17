@@ -76,10 +76,4 @@ export const BtnComprar = styled.button`
     svg {
         font-size: 0.8rem;
     }
-
-    &:hover{
-        cursor: pointer;
-        background-color: darkblue;
-        font-weight: bold;
-    }
 `;

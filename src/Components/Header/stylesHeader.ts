@@ -27,12 +27,17 @@ export const BtnWrapper = styled.div`
     gap: 1rem;
 `;
 
-export const AutenticacaoBtn = styled.button`
+// Props para o botão de autenticação, indicando se o usuário está logado ou não
+interface BtnProps {
+    estaLogado: boolean;
+}
+
+export const AutenticacaoBtn = styled.button<BtnProps>`
     border: none;
     border-radius: 5px;
     height: 30px;
     padding: 0 1rem;
-    background-color: green;
+    background-color: ${(props) => props.estaLogado ? 'red' : 'green'}; /* Cor muda com base no estado de autenticação */
     color: white;
     font-weight: 0.7rem;
 
@@ -42,12 +47,6 @@ export const AutenticacaoBtn = styled.button`
 
     svg {
         font-size: 0.8rem;
-    }
-
-    &:hover{
-        cursor: pointer;
-        background-color: darkgreen;
-        font-weight: bold;
     }
 `;
 
@@ -65,12 +64,6 @@ export const CarrinhoBtn = styled.button`
 
     svg {
         font-size: 0.8rem;
-    }
-
-    &:hover{
-        cursor: pointer;
-        background-color: darkviolet;
-        color: white;
     }
 `;
 

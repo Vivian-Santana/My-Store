@@ -3,12 +3,9 @@ import { FiShoppingCart } from "react-icons/fi";
 import { Product } from "../ListaDeProdutos/ListaDeProdutos";
 import { FaRegStar,  FaStar} from "react-icons/fa";
 
-
 export type Props = {
   product: Product;
 };
-
-
 
 export const CardProduto: React.FC<Props> = ({ product }) => {
   return (
