@@ -77,3 +77,23 @@ export const BtnComprar = styled.button`
         font-size: 0.8rem;
     }
 `;
+
+export const BtnRemover = styled.button`
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    padding: 0 1rem;
+    width: 100%;
+    background-color: darkviolet;
+    color: white;
+    margin-top: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+
+    svg {
+        font-size: 0.8rem;
+    }
+`;
