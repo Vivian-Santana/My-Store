@@ -38,3 +38,8 @@ export function carrinhoReducer(state = estadoInicial, action: CarrinhoAction): 
     }
 
 }
+
+export const removerProduto = (produto: Product) => ({
+  type: "carrinho/remover",
+  payload: produto
+});

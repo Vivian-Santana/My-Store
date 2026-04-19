@@ -1,3 +1,4 @@
+import { FiShoppingCart } from "react-icons/fi";
 import styled from "styled-components";
 
 interface ContainerProps {
@@ -18,6 +19,57 @@ export const Container = styled.aside<ContainerProps>`
     transition: right 0.3s ease-in-out; /* Animação suave para mostrar/esconder o carrinho */
 `
 
-export const Title = styled.h2`
-    font-size: 1.5rem;
+export const Title = styled.h1`
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    color: darkviolet;
 `;
+
+export const IconeCarrinho = styled(FiShoppingCart)`
+  color: darkviolet;
+  font-size: 26px;
+
+`;
+
+export const ListaDeProdutosCarrinho = styled.ul`
+    padding:  2rem 0;
+    list-style: none;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+`
+
+export const ProdutoItemCarrinho = styled.li`
+    font-size: 1rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+
+`
+
+export const TotalCarrinho = styled.strong`
+    font-size: 1.2rem;
+`
+
+export const BtnExcluirProduto = styled.button`
+    background-color: transparent;
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 0 0.5rem;
+    cursor: pointer;
+    margin-left: 1rem;
+
+    &:hover {
+        background-color: darkred;
+        color: white;
+    }
+`
+
+export const BotaoFecharCarrinho = styled.button`
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+`

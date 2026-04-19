@@ -1,6 +1,5 @@
 import { combineReducers } from "redux";
 import { usuarioReducer } from "./UsuarioReducer/reducer";
-import { Carrinho } from "../Components/Carrinho/Carrinho";
 import { carrinhoReducer } from "./Carrinho/carrinho-reducer";
 
  // Aqui pode adicionar outros reducers, como produtosReducer, carrinhoReducer, etc.

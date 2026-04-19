@@ -33,7 +33,7 @@ export const ListaDeProdutos: React.FC = () => {
   return (
     <S.Container>
         {product.map((product) => (
-        <CardProduto key={product.id} product={product} />
+        <CardProduto key={product.id} produto={product} />
       ))}
     </S.Container>
     );
