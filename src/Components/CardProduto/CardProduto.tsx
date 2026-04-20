@@ -4,7 +4,7 @@ import { Product } from "../ListaDeProdutos/ListaDeProdutos";
 import { FaRegStar,  FaStar} from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { RootReducer } from "../../redux/root.reducer";
-import { removerProduto } from "../../redux/Carrinho/carrinho-reducer";
+import { addProduto, removerProduto } from "../../redux/Carrinho/carrinho.slice";
 
 export type Props = {
   produto: Product;
@@ -14,15 +14,17 @@ export const CardProduto: React.FC<Props> = ({ produto }) => {
   const { carrinho } = useSelector((rootReducer: RootReducer) => rootReducer.carrinhoReducer); //acesso ao estado do carrinho
   const dispatch = useDispatch();
   
-  //verifica se o produto já está no carrinho, retornando true ou false
+  // Verifica se o produto já está no carrinho, retornando true ou false
   const produtoEstaNoCarrinho = carrinho
-  .find((produtoNoCarrinho) => produto.id === produtoNoCarrinho.id) !== undefined;
+    .find((produtoNoCarrinho: Product) => produto.id === produtoNoCarrinho.id) !== undefined;
 
   function adicionarAoCarrinho(){
     dispatch({
       type: "carrinho/adicionar",
       payload: produto, //payload: adiciona o produto ao carrinho
     });
+
+    dispatch(addProduto(produto));
   }
 
   return (

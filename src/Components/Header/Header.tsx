@@ -4,30 +4,34 @@ import { FiLogIn, FiLogOut, FiShoppingCart } from "react-icons/fi";
 import { Carrinho } from "../Carrinho/Carrinho";
 import { useDispatch, useSelector } from "react-redux";
 import { RootReducer } from "../../redux/root.reducer";
+import { login, logout } from "../../redux/UsuarioReducer/usuario-slice";
 
 export const Header: React.FC = () => {
     const usuario = useSelector((rootReducer: RootReducer) => rootReducer.usuarioReducer.usuario);
+    
     const dispatch = useDispatch();
 
     const [mostrarCarrinho, setMostrarCarrinho] = React.useState(false);
+
     const Logado = usuario !== null; // Simulação de estado de autenticação
 
     function handleAutenticacao() {
         if (usuario === null) {
             //despachar a action de login
-            dispatch({ 
-                type: "usuario/login", 
-                payload: { 
-                    nome: "Maria da Silva", 
-                    email: "maria.silva@example.com" 
-                },
-            });
+            dispatch(
+                login({
+                    name: "Vivian",
+                    email: "vivian@email.com",
+                })
+            ); 
         } else {
             //despachar a action de logout
-            dispatch({ 
-                type: "usuario/logout",
-            });
+            dispatch(logout({}));
         }
+    }
+
+    function fecharCarrinho() {
+        setMostrarCarrinho(false);
     }
 
   return (
@@ -48,7 +52,10 @@ export const Header: React.FC = () => {
             </S.BtnWrapper>
         </S.Wrapper>
 
-        <Carrinho mostrarCarrinho={mostrarCarrinho} />
+        <Carrinho 
+            mostrarCarrinho={mostrarCarrinho} 
+            fecharCarrinho={fecharCarrinho} 
+        />
     </S.StyledHeader>
   );
 };

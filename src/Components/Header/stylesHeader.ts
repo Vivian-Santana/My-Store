@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
-background-color: black;
-  
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
 `;
 
 export const Wrapper = styled.div`
@@ -66,4 +69,3 @@ export const CarrinhoBtn = styled.button`
         font-size: 0.8rem;
     }
 `;
-
