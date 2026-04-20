@@ -22,8 +22,6 @@ export const Container = styled.aside<ContainerProps>`
     display: flex;
     flex-direction: column;
     overflow: hidden;
-
-
 `;
 
 export const ContainerHeaderCarrinho = styled.div`
@@ -32,7 +30,6 @@ export const ContainerHeaderCarrinho = styled.div`
     padding: 1rem;
     margin: 0.5rem 0.5rem 0;
     border-bottom: 1px solid #c7c1c9;
-    
 `;
 
 export const Title = styled.h1`

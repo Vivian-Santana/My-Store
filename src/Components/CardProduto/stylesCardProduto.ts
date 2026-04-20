@@ -41,7 +41,6 @@ export const Avaliacoes = styled.span`
     font-size: 0.7rem;
     gap: 0.2rem;
     
-    
     svg{
         font-size: 1rem;
     }

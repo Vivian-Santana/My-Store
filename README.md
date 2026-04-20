@@ -8,9 +8,9 @@ Projeto pessoal para estudo de **React**, com foco em aprender e praticar os **c
 
 - Listagem de produtos
 - Consumo de API externa
-- Exibição de imagens e preços
-- Estrutura inicial com Redux
-
+- Carrinho de compras
+- Adicionar e remover itens do carrinho
+- Exibição de imagem, preço, descrição e avaliação dos itens em cards responsivos
  ---
 
 ## 🎯 Objetivo do Projeto
@@ -49,4 +49,8 @@ yarn install
 yarn start
 ```
 
+###
 
+| | | |
+|---|---|---|
+| ![Screenshot da pagina](./img-readme/my-store.png) | ![Screenshot do carinho](./img-readme/my-store-carrinho.png) | ![Screenshot da pagina mobile](./img-readme/my-store-mobile.png)|

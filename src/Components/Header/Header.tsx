@@ -52,6 +52,10 @@ export const Header: React.FC = () => {
             </S.BtnWrapper>
         </S.Wrapper>
 
+        {mostrarCarrinho && (
+            <S.Overlay onClick={fecharCarrinho} />
+        )}
+
         <Carrinho 
             mostrarCarrinho={mostrarCarrinho} 
             fecharCarrinho={fecharCarrinho} 
